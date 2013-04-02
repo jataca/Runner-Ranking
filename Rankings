@@ -1,4 +1,3 @@
-
 public class Rankings {
   Runner[] theRunners;
 	
@@ -27,7 +26,7 @@ public class Rankings {
 					+ ":" + theRunners[ i ].getSeconds()
 					+ " " + theRunners[ i ].getName() 
 					+ "\n";
-		}
+		} 
 		
 		return returnStr;
 	}
