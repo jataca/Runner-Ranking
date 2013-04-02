@@ -1,0 +1,34 @@
+
+public class Rankings {
+  Runner[] theRunners;
+	
+	public Rankings( Runner[] r ){
+		theRunners = new Runner[ r.length ];
+		for(int i = 0; i < r.length; i ++ ) {
+			theRunners[ i ] = r[ i ]; 
+			
+		}
+	}
+
+	public String toString(){
+		String returnStr = "";
+		
+		int rank;
+	
+		  for (int i = 0, j = 1; i < theRunners.length && j < theRunners.length; i++, j++ ){
+			if (theRunners[(i)].getSeconds() == theRunners[(j)].getSeconds()){
+				 rank = 2 ; 
+		    }
+				else{ 
+					 rank = j;
+			}
+			returnStr += (i+1) + " " + rank + " " 				
+					+ theRunners[ i ].getMinutes()
+					+ ":" + theRunners[ i ].getSeconds()
+					+ " " + theRunners[ i ].getName() 
+					+ "\n";
+		}
+		
+		return returnStr;
+	}
+}
